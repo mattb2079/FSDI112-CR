@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib import admin
 
 # Create your models here.
 
@@ -36,6 +37,15 @@ class Movie(models.Model):
 
     #def __str__(self):
     #   return str(self.release_year) + self.title
+
+# Customized Admin displays
+
+class GenreAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')
+
+class MovieAdmin(admin.ModelAdmin):
+    list_display_links = ('id', 'title')
+    list_display = ('id', 'release_year', 'title', 'genre')
 
 class Country(models.Model):
     name = models.CharField(max_length = 255)
