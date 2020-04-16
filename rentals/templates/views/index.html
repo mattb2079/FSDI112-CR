@@ -1,0 +1,23 @@
+{% extends "views/layout.html" %}
+
+{% block content %}
+
+{% for movie in movies %}
+
+<div class="entry">
+    <img class="movie_img" src={{ movie.image_url}}></img>
+    <h3> {{ movie.title }} </h3>
+    <h3> ({{ movie.genre }})</h3>
+    <h4> {{ movie.release_year }}</h4>
+    <h5> {{ movie.star }} </h5>
+    <h6> ${{ movie.price }} </h6>
+</div>
+{% endfor %}
+
+{% endblock %}
+
+{% block bottom %}
+    {% load static %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{% static 'catalog.js' %}"></script>
+{% endblock %}

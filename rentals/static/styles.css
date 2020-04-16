@@ -1,0 +1,27 @@
+body{
+    background-image: url("https://www.designwizard.com/wp-content/uploads/2019/08/56-Transparency-Geometric-Designs.jpg");
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    line-height: 60%;
+}
+
+.movie_img{
+    height: 60vh;
+    border: 2px solid goldenrod;
+}
+
+.entry{
+    color: lightgray;
+    background-color: black;
+    display: block;
+    border: 3px solid lightgray;
+    border-radius: 8px;
+    padding: 5%;
+    margin-bottom: 20px;
+    width: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
